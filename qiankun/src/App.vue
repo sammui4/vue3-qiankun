@@ -1,11 +1,11 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
+    <router-link to="/about">base-About</router-link> |
     <router-link to="/demo2">demo2</router-link> |
-    <router-link to="/about2">About2</router-link> |
+    <router-link to="/demo2/about">demo2-About</router-link> |
     <router-link to="/demo3">demo3</router-link> |
-    <router-link to="/about3">About3</router-link>
+    <router-link to="demo3/about">demo3-About</router-link>
   </div>
   <router-view/>
   <div id="subapp-container"></div>

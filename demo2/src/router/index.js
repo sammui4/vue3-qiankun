@@ -2,7 +2,7 @@
  * @Author: w
  * @Date: 2021-05-10 15:58:09
  * @LastEditors: w
- * @LastEditTime: 2021-05-11 09:36:18
+ * @LastEditTime: 2021-05-11 11:06:02
  */
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
@@ -14,7 +14,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/about2',
+    path: '/about',
     name: 'About',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
