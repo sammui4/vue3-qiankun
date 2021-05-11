@@ -2,7 +2,7 @@
  * @Author: w
  * @Date: 2021-05-10 15:36:36
  * @LastEditors: w
- * @LastEditTime: 2021-05-11 09:46:47
+ * @LastEditTime: 2021-05-11 11:24:58
  */
 import { createApp } from 'vue'
 import App from './App.vue'
@@ -35,12 +35,13 @@ function render({ appContent, loading } = {}) {
 
 render()
 
+// 主应用注册微应用并启动
 registerMicroApps([
   {
-    name: 'demo2', // app name registered
-    entry: '//localhost:1002',
-    container: '#subapp-container',
-    activeRule: '/demo2',
+    name: 'demo2', // 微应用名称，必须唯一性
+    entry: '//localhost:1002',    // 微应用入口（暂时只是线下的，线上的估计不一样
+    container: '#subapp-container', // 微应用的容器节点（选择器），或者是元素实例
+    activeRule: '/demo2',           // 微应用的激活规则
   },
   {
     name: 'demo3', // app name registered
@@ -49,5 +50,7 @@ registerMicroApps([
     activeRule: '/demo3',
   },
 ]);
+
+
 
 start();
