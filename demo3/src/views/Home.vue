@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    home
+    demo3
   </div>
 </template>
 

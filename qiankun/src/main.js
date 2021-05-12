@@ -2,7 +2,7 @@
  * @Author: w
  * @Date: 2021-05-10 15:36:36
  * @LastEditors: w
- * @LastEditTime: 2021-05-11 11:24:58
+ * @LastEditTime: 2021-05-11 14:07:54
  */
 import { createApp } from 'vue'
 import App from './App.vue'
@@ -51,6 +51,29 @@ registerMicroApps([
   },
 ]);
 
+// 主应用建立共享状态
+const { onGlobalStateChange, setGlobalState } = initGlobalState({
+  user: 'qiankun',
+  // 首次打开时显示骨架屏
+  showSke: true,
+});
 
+onGlobalStateChange((value, prev) =>{
+  // console.log('[onGlobalStateChange - master]:', value, prev)
+  
+})
+
+setGlobalState({
+  ignore: 'master',
+  // user: {
+  //   name: 'master'
+  // }
+  msg: '来自master动态设定的消息',
+})
+
+/**
+ * Step3 设置默认进入的子应用
+ */
+// setDefaultMountApp('/vue3')
 
 start();
